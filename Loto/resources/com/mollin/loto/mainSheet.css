@@ -1,0 +1,17 @@
+.cell_text {
+    -fx-font-family: Arial;
+    -fx-font-weight: bold;
+}
+
+.last_number_style_text {
+    -fx-font-family: Trebuchet;
+}
+
+.last_number_style_number {
+    -fx-font-family: Trebuchet;
+    -fx-font-weight: bold;
+}
+
+.multi_text {
+    -fx-font-family: Trebuchet;
+}
