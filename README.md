@@ -1,2 +1,2 @@
 # Loto associatif
-- [site web](http://logiciel-loto.fr)
+- [Le site web](https://florian-mollin.github.io/loto-associatif/)
