@@ -4,9 +4,8 @@ rem variables
 set launch4jXml=.\launch4j.xml
 set innoSetupIss=.\innoSetup.iss
 set icon=.\icon.ico
-set jre=.\jre1.8.0_51
-set lotojar=..\..\Loto\dist\Loto.jar
-set lib=..\..\Loto\dist\lib
+set jre=C:\Program Files (x86)\Java\jre1.8.0_131
+set lotojar=..\..\Loto\build\libs\Loto-all.jar
 set launch4jExe=C:\Program Files (x86)\Launch4j\launch4jc.exe
 set innoSetupExe=C:\Program Files (x86)\Inno Setup 5\Compil32.exe
 
@@ -17,7 +16,8 @@ for %%f in (
 	"%icon%"
 	"%jre%"
 	"%lotojar%"
-	"%lib%"
+	"%launch4jExe%"
+	"%innoSetupExe%"
 ) do (
 	if not exist "%%f" (
 		echo ERR : %%f n'existe pas
@@ -35,7 +35,6 @@ copy "%innoSetupIss%" work
 copy "%icon%" work
 xcopy "%jre%" work\jre /e /i /Y
 copy "%lotojar%" work\Loto.jar
-xcopy "%lib%" work\lib /e /i /Y
 
 rem execution des utilitaires pour créer l'executable
 "%launch4jExe%" work\%launch4jXml%
