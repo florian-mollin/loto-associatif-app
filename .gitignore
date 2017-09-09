@@ -1,8 +1,4 @@
-/Loto/build/
-/Loto/dist/
-/Loto/libs/CopyLibs
-/Loto/libs/nblibraries.properties
-/Loto/nbproject
 /Loto/executable/work/
-/Loto/build.xml
-/Loto/manifest.mf
+/Loto/.nb-gradle/
+/Loto/.gradle/
+/Loto/build/
