@@ -103,7 +103,7 @@ public interface Constants {
         public static final Glyph EXIT_BUTTON_GLYPH = Glyph.TIMES;
         public static final boolean FULL_SCREEN_APP = true;
         public static final String VERSION_NUMBER = "1.0.0";
-        public static final String WEBSITE_URL = "www.logiciel-loto.fr";
+        public static final String WEBSITE_URL = "https://florian-mollin.github.io/loto-associatif/";
         public static final String LICENSE_NAME = "MIT";
     }
 
