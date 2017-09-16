@@ -1,12 +1,12 @@
 package com.mollin.loto.logic.main.utils;
 
 import com.mollin.loto.Loto;
-import java.util.Arrays;
-import java.util.List;
 import org.controlsfx.glyphfont.FontAwesome.Glyph;
 
+import java.util.Arrays;
+import java.util.List;
+
 /**
- *
  * @author MOLLIN Florian
  */
 public interface Constants {

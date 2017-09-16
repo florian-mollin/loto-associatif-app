@@ -8,9 +8,6 @@ import com.mollin.loto.gui.main.utils.resizable.ResizableGroup;
 import com.mollin.loto.logic.main.grid.Grid;
 import com.mollin.loto.logic.main.grid.LotoGridListener;
 import com.mollin.loto.logic.main.utils.Constants;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.IntegerBinding;
 import javafx.beans.binding.NumberBinding;
@@ -20,6 +17,10 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 /**
  * Représente la grille du loto.
@@ -188,7 +189,7 @@ public class LotoGridGUI extends StackPane implements LotoGridListener {
      * Vérifie si une position se trouve dans un index
      *
      * @param xory La position
-     * @param ind L'index
+     * @param ind  L'index
      * @return Vrai si la position est dans un index
      */
     private boolean isInIndex(double xory, int ind) {
@@ -210,7 +211,7 @@ public class LotoGridGUI extends StackPane implements LotoGridListener {
     /**
      * Propagation de l'evenement 'clic'.
      *
-     * @param number	Le nombre cliqué.
+     * @param number Le nombre cliqué.
      */
     private void fireClic(int number) {
         if (this.listener != null) {

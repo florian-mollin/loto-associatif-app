@@ -25,7 +25,7 @@ public class Grid {
     /**
      * Constructeur d'une grille avec un ensemble de nombres déjà tiré.
      *
-     * @param numbers	L'ensemble de nombres déjà tiré
+     * @param numbers L'ensemble de nombres déjà tiré
      */
     public Grid(Set<Integer> numbers) {
         this.numbers = numbers;
@@ -52,8 +52,8 @@ public class Grid {
     /**
      * Test si la grille contient un nombre donné.
      *
-     * @param number	Le nombre à tester.
-     * @return	Vrai si le nombre est dans la grille.
+     * @param number Le nombre à tester.
+     * @return Vrai si le nombre est dans la grille.
      */
     public boolean contains(int number) {
         return this.numbers.contains(number);
@@ -62,7 +62,7 @@ public class Grid {
     /**
      * Renvoie l'ensemble des nombres tirés de la grille.
      *
-     * @return	L'ensemble des nombres tirés de la grille.
+     * @return L'ensemble des nombres tirés de la grille.
      */
     public Set<Integer> getNumbers() {
         return this.numbers;
@@ -72,7 +72,7 @@ public class Grid {
      * Inverse un nombre dans la grille.<br>
      * Si le nombre est présent, il est enlevé, sinon il est ajouté.
      *
-     * @param number	Le nombre à inverser
+     * @param number Le nombre à inverser
      */
     private void switchNumber(int number) {
         if (this.numbers.contains(number)) {
@@ -85,8 +85,8 @@ public class Grid {
     /**
      * Crée une nouvelle grille identique avec le nombre inversé donné.
      *
-     * @param number	Le nombre à inverser sur la nouvelle grille.
-     * @return	La nouvelle grille.
+     * @param number Le nombre à inverser sur la nouvelle grille.
+     * @return La nouvelle grille.
      */
     public Grid derive(int number) {
         Grid resultGrid = new Grid(this);

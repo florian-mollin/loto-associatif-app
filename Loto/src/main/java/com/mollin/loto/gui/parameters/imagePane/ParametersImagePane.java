@@ -5,9 +5,6 @@ import com.mollin.loto.gui.utils.GlyphUtils;
 import com.mollin.loto.logic.parameters.model.ParametersModel;
 import com.mollin.loto.logic.parameters.utils.Constants;
 import com.mollin.loto.logic.storage.ParametersProfileStorage;
-import java.io.File;
-import java.util.Collections;
-import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -26,6 +23,10 @@ import org.controlsfx.glyphfont.FontAwesome;
 import org.controlsfx.glyphfont.FontAwesome.Glyph;
 import org.javatuples.Pair;
 
+import java.io.File;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Panneau permettant le parametrages des "images" (cad : des logos)
  *
@@ -42,7 +43,7 @@ public class ParametersImagePane extends BorderPane {
      * Contructeur du panneau
      *
      * @param profileName Nom du profil
-     * @param param Parametres
+     * @param param       Parametres
      */
     public ParametersImagePane(String profileName, ParametersModel param) {
         super();

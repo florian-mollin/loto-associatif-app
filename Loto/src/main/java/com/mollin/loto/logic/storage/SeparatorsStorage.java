@@ -1,10 +1,11 @@
 package com.mollin.loto.logic.storage;
 
-import com.mollin.loto.logic.main.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mollin.loto.gui.main.utils.SeparatorsParameters;
+import com.mollin.loto.logic.main.utils.Constants;
 import com.mollin.loto.logic.utils.FileUtils;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -43,7 +44,7 @@ public class SeparatorsStorage {
     /**
      * Sauvegarde des séparateurs
      *
-     * @param param Parametres des séparateurs à sauvegarder
+     * @param param       Parametres des séparateurs à sauvegarder
      * @param profileName Le nom du profil
      */
     public static void saveSeparatorsParameters(SeparatorsParameters param, String profileName) {

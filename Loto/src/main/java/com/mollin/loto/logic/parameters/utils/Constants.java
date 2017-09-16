@@ -1,7 +1,6 @@
 package com.mollin.loto.logic.parameters.utils;
 
 /**
- *
  * @author MOLLIN Florian
  */
 public interface Constants {

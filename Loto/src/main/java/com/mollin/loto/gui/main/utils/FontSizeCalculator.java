@@ -1,10 +1,5 @@
 package com.mollin.loto.gui.main.utils;
 
-import java.util.Arrays;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
 import javafx.beans.binding.IntegerBinding;
 import javafx.beans.binding.NumberExpression;
 import javafx.geometry.BoundingBox;
@@ -13,6 +8,12 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
+
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 /**
  * Permet de produire un 'binding' sur la taille d'une police. Cette classe
@@ -24,10 +25,10 @@ public class FontSizeCalculator {
     /**
      * Construit la map associant une taille de police à une surface.
      *
-     * @param lStr La liste des possibles chaines de caractères
+     * @param lStr        La liste des possibles chaines de caractères
      * @param fontSizeMax La taille maximale de la police
      * @param stylesheets Les feuilles de styles
-     * @param styleClass La classe potentielle du champ text
+     * @param styleClass  La classe potentielle du champ text
      * @return la map 'taille police' vers 'surface' calculée grace aux chaines
      * de caractères données
      */
@@ -61,10 +62,10 @@ public class FontSizeCalculator {
     /**
      * Construit la map associant une taille de police à une surface.
      *
-     * @param str La chaine de caractère
+     * @param str         La chaine de caractère
      * @param fontSizeMax La taille maximale de la police
      * @param stylesheets Les feuilles de styles
-     * @param styleClass La classe potentielle du champ text
+     * @param styleClass  La classe potentielle du champ text
      * @return la map 'taille police' vers 'surface' calculée grace à la chaine
      * de caractère donnée
      */
@@ -76,8 +77,8 @@ public class FontSizeCalculator {
      * Crée un binding pour la taille d'une police de caractère en fonction de
      * la hauteur et largeur et de la map données
      *
-     * @param widthProperty Largeur
-     * @param heightProperty Hauteur
+     * @param widthProperty   Largeur
+     * @param heightProperty  Hauteur
      * @param fontSize2Bounds Map de correspondance
      * @return Un binding sur la police de caractere
      */
@@ -101,7 +102,7 @@ public class FontSizeCalculator {
      * Crée un binding pour la taille d'une police de caractère en fonction de
      * la region et de la map données
      *
-     * @param region La région
+     * @param region          La région
      * @param fontSize2Bounds Map de correspondance
      * @return Un binding sur la police de caractere
      */
@@ -112,8 +113,8 @@ public class FontSizeCalculator {
     /**
      * Calcule la police de caractère afin qu'elle rentre dans la zone donnée
      *
-     * @param width Largeur de la zone
-     * @param height Hauteur de la zone
+     * @param width           Largeur de la zone
+     * @param height          Hauteur de la zone
      * @param fontSize2Bounds La police la plus appropriée
      * @return La police permettant de faire contenir le texte dans la zone
      * donnée

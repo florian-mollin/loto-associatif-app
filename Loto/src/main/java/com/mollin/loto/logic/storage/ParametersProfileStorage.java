@@ -1,10 +1,14 @@
 package com.mollin.loto.logic.storage;
 
-import com.mollin.loto.logic.main.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mollin.loto.logic.main.utils.Constants;
 import com.mollin.loto.logic.parameters.model.ParametersModel;
 import com.mollin.loto.logic.utils.FileUtils;
+import javafx.scene.image.Image;
+import org.javatuples.Pair;
+import org.zeroturnaround.zip.ZipUtil;
+
 import java.io.File;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -13,9 +17,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import javafx.scene.image.Image;
-import org.javatuples.Pair;
-import org.zeroturnaround.zip.ZipUtil;
 
 /**
  * Gestion du chargement/sauvegarde des profils (et des parametres)
@@ -89,7 +90,7 @@ public class ParametersProfileStorage {
      * Sauvegarde des parametres pour le profil donné
      *
      * @param profileName Nom du profil
-     * @param param Parametres
+     * @param param       Parametres
      * @return Vrai si la sauvegarde s'est correctement déroulée (faux sinon)
      */
     public static boolean saveParametersProfile(String profileName, ParametersModel param) {
@@ -124,7 +125,7 @@ public class ParametersProfileStorage {
     /**
      * Sauvegarde d'une image dans le profil donné
      *
-     * @param image L'image à sauvegarder
+     * @param image       L'image à sauvegarder
      * @param profileName Le nom du profil
      * @return Le nouveau nom de l'image
      */
@@ -150,7 +151,7 @@ public class ParametersProfileStorage {
     /**
      * Récupération d'une image pour le profil donné
      *
-     * @param imageName Le nom de l'image
+     * @param imageName   Le nom de l'image
      * @param profileName Le nom du profil
      * @return L'image récupérée (null si erreur)
      */
@@ -171,7 +172,7 @@ public class ParametersProfileStorage {
      * Exportation du profil (sous forme de ZIP)
      *
      * @param profileName le nom du profil
-     * @param target La destination du profil
+     * @param target      La destination du profil
      * @return Vrai si pas d'erreur
      */
     public static boolean exportProfile(String profileName, File target) {

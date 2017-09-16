@@ -9,7 +9,7 @@ public interface LotoGridInterface {
     /**
      * Effectue un clic sur le nombre donné.
      *
-     * @param number	Le nombre sur lequel cliquer
+     * @param number Le nombre sur lequel cliquer
      */
     public void clic(int number);
 

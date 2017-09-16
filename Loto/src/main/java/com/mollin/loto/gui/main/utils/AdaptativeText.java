@@ -15,7 +15,7 @@ public class AdaptativeText extends Text {
     /**
      * Constructeur du texte
      *
-     * @param label Le label
+     * @param label    Le label
      * @param fontSize Le binding correspondant à la taille de la police
      */
     public AdaptativeText(String label, NumberExpression fontSize) {

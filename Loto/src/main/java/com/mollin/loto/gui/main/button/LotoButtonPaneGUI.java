@@ -28,9 +28,9 @@ public class LotoButtonPaneGUI extends BorderPane {
     /**
      * Constructeur du panneau.
      *
-     * @param param Parametres
-     * @param grid La grille
-     * @param scene La scene
+     * @param param         Parametres
+     * @param grid          La grille
+     * @param scene         La scene
      * @param editProcedure La procedure à appeler lors du clic sur éditer
      */
     public LotoButtonPaneGUI(LotoButtonPaneGUIParameters param, LotoGrid grid, Scene scene, Procedure editProcedure) {

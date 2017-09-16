@@ -18,11 +18,11 @@ public class GlyphUtils {
     /**
      * Configure un bouton pour lui ajouter un texte et un icon
      *
-     * @param <T> Le type de bouton
-     * @param button Le bouton à parametrer
-     * @param icon L'icon du bouton
-     * @param text Le label du bouton
-     * @param fontSize La taille de la police
+     * @param <T>            Le type de bouton
+     * @param button         Le bouton à parametrer
+     * @param icon           L'icon du bouton
+     * @param text           Le label du bouton
+     * @param fontSize       La taille de la police
      * @param contentDisplay La position de l'icone
      * @return Le bouton avec l'icone et le label
      */
@@ -85,7 +85,7 @@ public class GlyphUtils {
     /**
      * Crée un icon
      *
-     * @param icon L'icone à créer
+     * @param icon     L'icone à créer
      * @param fontSize La taille de l'icone
      * @return L'icone (sous forme de Label)
      */

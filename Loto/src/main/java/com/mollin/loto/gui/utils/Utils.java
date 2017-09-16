@@ -1,8 +1,6 @@
 package com.mollin.loto.gui.utils;
 
 import com.mollin.loto.gui.main.utils.ScreenFormat;
-import java.lang.reflect.Field;
-import java.util.function.UnaryOperator;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.geometry.Insets;
@@ -10,16 +8,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.TextFormatter;
 import javafx.scene.control.Tooltip;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.Border;
-import javafx.scene.layout.BorderStroke;
-import javafx.scene.layout.BorderStrokeStyle;
-import javafx.scene.layout.BorderWidths;
-import javafx.scene.layout.CornerRadii;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.lang.reflect.Field;
+import java.util.function.UnaryOperator;
 
 /**
  * Classe contenant les méthodes utilitaires
@@ -39,7 +34,7 @@ public class Utils {
     /**
      * Permet de masquer ou de faire apparaitre les séparateurs des splitPanes.
      *
-     * @param scene La scene (pour le chargement du css)
+     * @param scene   La scene (pour le chargement du css)
      * @param display Vrai pour afficher les séparateurs, faux sinon
      */
     public static void displaySplitPaneSeparator(Scene scene, boolean display) {
@@ -63,7 +58,7 @@ public class Utils {
     /**
      * Crée une bordure de couleur unie
      *
-     * @param color La couleur de la bordure
+     * @param color       La couleur de la bordure
      * @param borderWidth La taille de la bordure
      * @return Une bordure de couleur unie
      */
@@ -104,7 +99,7 @@ public class Utils {
      * Change le temps d'apparition d'une tooltip (grace a la reflexivité).
      *
      * @param tooltip La tooltip pour lequel il faut changer le temps
-     * d'apparition.
+     *                d'apparition.
      */
     private static void hackTooltipStartTiming(Tooltip tooltip) {
         try {

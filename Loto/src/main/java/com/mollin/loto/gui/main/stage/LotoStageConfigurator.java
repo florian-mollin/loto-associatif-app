@@ -78,9 +78,9 @@ public class LotoStageConfigurator {
     /**
      * Configure le stage avec les différents éléments.
      *
-     * @param stage Le stage à configurer
-     * @param param Parametres de l'application
-     * @param profileName Nom du profil
+     * @param stage        Le stage à configurer
+     * @param param        Parametres de l'application
+     * @param profileName  Nom du profil
      * @param profileStage Stage pour revenir au choix du profil
      */
     public static void configureStage(Stage stage, ParametersModel param, String profileName, Stage profileStage) {

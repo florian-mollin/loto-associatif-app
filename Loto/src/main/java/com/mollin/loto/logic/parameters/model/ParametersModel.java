@@ -8,13 +8,14 @@ import com.mollin.loto.gui.main.multiTextPane.LotoMultiTextPaneGUI;
 import com.mollin.loto.gui.main.numberPane.LotoNumberPaneGUI;
 import com.mollin.loto.gui.main.stage.LotoParameters;
 import com.mollin.loto.logic.storage.ParametersProfileStorage;
+import javafx.scene.image.Image;
+import javafx.scene.paint.Color;
+import org.javatuples.Pair;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import javafx.scene.image.Image;
-import javafx.scene.paint.Color;
-import org.javatuples.Pair;
 
 /**
  * Parametres de l'application (classe "sérializée" pour la sauvegarde des

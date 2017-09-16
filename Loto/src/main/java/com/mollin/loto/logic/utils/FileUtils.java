@@ -1,11 +1,7 @@
 package com.mollin.loto.logic.utils;
 
 import java.io.IOException;
-import java.nio.file.FileVisitResult;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.SimpleFileVisitor;
-import java.nio.file.StandardCopyOption;
+import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +17,7 @@ public class FileUtils {
      * Test si le path est un repertoire.
      *
      * @param path Le path à tester.
-     * @return	Vrai si le path est un dossier.
+     * @return Vrai si le path est un dossier.
      */
     public static boolean isDirectory(Path path) {
         return Files.isDirectory(path);
@@ -31,7 +27,7 @@ public class FileUtils {
      * Test si le path est un fichier.
      *
      * @param path Le path à tester.
-     * @return	Vrai si le path est un fichier.
+     * @return Vrai si le path est un fichier.
      */
     public static boolean isFile(Path path) {
         return Files.isRegularFile(path);
@@ -41,7 +37,7 @@ public class FileUtils {
      * Test si le path existe.
      *
      * @param path Le path à tester.
-     * @return	Vrai si le path existe.
+     * @return Vrai si le path existe.
      */
     public static boolean exists(Path path) {
         return Files.exists(path);
@@ -51,7 +47,7 @@ public class FileUtils {
      * Test si le path est un fichier accessible en écriture.
      *
      * @param path Le path à tester.
-     * @return	Vrai si le path est un fichier accessible en écriture.
+     * @return Vrai si le path est un fichier accessible en écriture.
      */
     public static boolean isWritable(Path path) {
         return Files.isWritable(path);
@@ -61,7 +57,7 @@ public class FileUtils {
      * Test si le path est un fichier accessible en lecture.
      *
      * @param path Le path à tester.
-     * @return	Vrai si le path est un fichier accessible en lecture.
+     * @return Vrai si le path est un fichier accessible en lecture.
      */
     public static boolean isReadable(Path path) {
         return Files.isReadable(path);
@@ -72,7 +68,7 @@ public class FileUtils {
      * Créé aussi les sous dossiers si il n'existent pas.
      *
      * @param directories Le repertoire à créer.
-     * @return	Vrai si la création s'est correctement déroulée.
+     * @return Vrai si la création s'est correctement déroulée.
      */
     public static boolean createDirectories(Path directories) {
         try {
@@ -90,7 +86,7 @@ public class FileUtils {
      * Créé aussi les sous dossiers si il n'existent pas.
      *
      * @param file Le fichier à créer.
-     * @return	Vrai si la création s'est correctement déroulée.
+     * @return Vrai si la création s'est correctement déroulée.
      */
     public static boolean createFile(Path file) {
         createDirectories(file.getParent());
@@ -107,8 +103,8 @@ public class FileUtils {
      * Créé aussi les dossiers contenant le fichier si ils n'existent pas.
      *
      * @param file le fichier dans lequel écrire.
-     * @param str la chaine à écrire.
-     * @return	Vrai si l'écriture a fonctionnée.
+     * @param str  la chaine à écrire.
+     * @return Vrai si l'écriture a fonctionnée.
      */
     public static boolean write(Path file, String str) {
         createDirectories(file.getParent());
@@ -124,7 +120,7 @@ public class FileUtils {
      * Lecture d'un fichier.
      *
      * @param file le fichier à lire.
-     * @return	La liste des lignes du fichier lu.
+     * @return La liste des lignes du fichier lu.
      */
     public static List<String> read(Path file) {
         if (isReadable(file)) {
@@ -173,7 +169,7 @@ public class FileUtils {
      * Copie d'un fichier dans répertoire (ecrase le fichier si il existe deja)
      *
      * @param fileToCopy Le fichier à copier
-     * @param dirOfCopy Le repertoire de destination
+     * @param dirOfCopy  Le repertoire de destination
      * @return Vrai si pas d'erreur
      */
     public static boolean copyFile(Path fileToCopy, Path dirOfCopy) {

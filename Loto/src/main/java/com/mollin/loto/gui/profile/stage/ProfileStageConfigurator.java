@@ -10,29 +10,27 @@ import com.mollin.loto.logic.parameters.model.ParametersModel;
 import com.mollin.loto.logic.profile.utils.Constants;
 import com.mollin.loto.logic.storage.ParametersProfileStorage;
 import com.mollin.loto.logic.utils.FileUtils;
-import java.io.File;
-import java.text.MessageFormat;
-import java.util.stream.Collectors;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.Label;
+import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
-import javafx.util.StringConverter;
-import org.javatuples.Pair;
-import javafx.scene.control.Separator;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
+import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import org.apache.commons.collections4.ListUtils;
 import org.controlsfx.control.Notifications;
+import org.javatuples.Pair;
+
+import java.io.File;
+import java.text.MessageFormat;
+import java.util.stream.Collectors;
+
 import static javafx.collections.FXCollections.observableArrayList;
 
 /**
@@ -246,7 +244,7 @@ public class ProfileStageConfigurator {
      * Lancement de la fenetre de parametrage
      *
      * @param profileName Nom du profil
-     * @param param Parametres
+     * @param param       Parametres
      */
     private static void goParametersStage(String profileName, ParametersModel param) {
         Stage paramStage = new Stage();
@@ -259,7 +257,7 @@ public class ProfileStageConfigurator {
      * Lancement de la fenetre du loto
      *
      * @param profileName Nom du profil
-     * @param param Parametres
+     * @param param       Parametres
      */
     private static void goLotoStage(String profileName, ParametersModel param) {
         Stage lotoStage = new Stage();

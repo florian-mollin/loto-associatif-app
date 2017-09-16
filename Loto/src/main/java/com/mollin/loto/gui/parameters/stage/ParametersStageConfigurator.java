@@ -7,7 +7,6 @@ import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.parameters.model.ParametersModel;
 import com.mollin.loto.logic.parameters.utils.Constants;
 import com.mollin.loto.logic.storage.ParametersProfileStorage;
-import java.text.MessageFormat;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -20,6 +19,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import org.controlsfx.control.Notifications;
+
+import java.text.MessageFormat;
 
 /**
  * Configurateur pour la fenetre des parametres
@@ -56,11 +57,11 @@ public class ParametersStageConfigurator {
     /**
      * Configuration du stage
      *
-     * @param stage Le stage à configurer
+     * @param stage       Le stage à configurer
      * @param profileName Le nom du profil
-     * @param param Parametres
-     * @param backStage Stage sur lequel on doit revenir lors d'un retour
-     * arriere
+     * @param param       Parametres
+     * @param backStage   Stage sur lequel on doit revenir lors d'un retour
+     *                    arriere
      */
     public static void configureStage(Stage stage, String profileName, ParametersModel param, Stage backStage) {
         ParametersStageConfigurator.stage = stage;

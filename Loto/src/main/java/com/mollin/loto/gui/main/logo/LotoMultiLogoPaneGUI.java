@@ -1,6 +1,5 @@
 package com.mollin.loto.gui.main.logo;
 
-import java.util.List;
 import javafx.animation.KeyFrame;
 import javafx.animation.SequentialTransition;
 import javafx.animation.Timeline;
@@ -9,6 +8,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.util.Duration;
 import org.javatuples.Pair;
+
+import java.util.List;
 
 /**
  * Panneau pour l'affichage des logos des sponsors

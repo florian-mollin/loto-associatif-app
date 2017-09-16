@@ -35,8 +35,8 @@ public class LotoCellGUI extends StackPane {
      * Constructeur de la cellule.
      *
      * @param cellNumber Le numéro de la cellule
-     * @param param Parametres de la cellule
-     * @param fontSize Binding sur la taille de la police du numéro
+     * @param param      Parametres de la cellule
+     * @param fontSize   Binding sur la taille de la police du numéro
      */
     public LotoCellGUI(int cellNumber, LotoCellGUIParameters param, IntegerBinding fontSize) {
         super();

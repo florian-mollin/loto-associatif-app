@@ -2,21 +2,18 @@ package com.mollin.loto.gui.parameters.imagePane;
 
 import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.parameters.utils.Constants;
-import java.io.File;
-import java.util.List;
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.geometry.HPos;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import org.javatuples.Pair;
+
+import java.io.File;
+import java.util.List;
 
 /**
  * Dialogue pour l'ajout d'images et d'un temps d'affichage

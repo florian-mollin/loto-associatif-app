@@ -2,9 +2,8 @@ package com.mollin.loto;
 
 import com.mollin.loto.gui.profile.stage.ProfileStageConfigurator;
 import javafx.application.Application;
-import javafx.stage.Stage;
-import static javafx.application.Application.launch;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
 
 /**
  * Classe principale de l'application de loto.

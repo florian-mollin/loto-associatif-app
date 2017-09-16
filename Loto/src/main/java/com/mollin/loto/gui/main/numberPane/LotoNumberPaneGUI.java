@@ -6,7 +6,6 @@ import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.main.grid.Grid;
 import com.mollin.loto.logic.main.grid.LotoGridListener;
 import com.mollin.loto.logic.main.utils.Constants;
-import java.util.LinkedHashMap;
 import javafx.beans.binding.IntegerBinding;
 import javafx.geometry.Bounds;
 import javafx.geometry.Orientation;
@@ -15,6 +14,8 @@ import javafx.scene.layout.Background;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
+
+import java.util.LinkedHashMap;
 
 /**
  * Panneau d'affichage du dernier numéro tiré

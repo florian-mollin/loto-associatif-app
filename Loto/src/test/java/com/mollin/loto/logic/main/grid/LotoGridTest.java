@@ -1,10 +1,12 @@
 package com.mollin.loto.logic.main.grid;
 
+import org.junit.Test;
+
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
+
 import static org.assertj.core.api.Assertions.assertThat;
-import org.junit.Test;
 
 /**
  * Test de la LotoGrid
@@ -113,9 +115,9 @@ public class LotoGridTest {
      * Renvoit l'ensemble contenant tous les entiers naturels allant de 'a' a
      * 'b'.
      *
-     * @param a	Borne inférieure (comprise)
-     * @param b	Borne supérieure (comprise)
-     * @return	L'ensemble des entiers naturels entre 'a' et 'b' (inclus)
+     * @param a Borne inférieure (comprise)
+     * @param b Borne supérieure (comprise)
+     * @return L'ensemble des entiers naturels entre 'a' et 'b' (inclus)
      */
     private static Set<Integer> rangeSet(int a, int b) {
         return IntStream.rangeClosed(a, b).boxed().collect(Collectors.toSet());

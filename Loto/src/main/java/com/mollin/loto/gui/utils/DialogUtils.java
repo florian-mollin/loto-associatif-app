@@ -1,16 +1,13 @@
 package com.mollin.loto.gui.utils;
 
-import java.util.Optional;
-import java.util.function.Function;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.property.StringProperty;
 import javafx.scene.Node;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonBar;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
-import javafx.scene.control.TextInputDialog;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.util.Optional;
+import java.util.function.Function;
 
 /**
  * Classe utilitaire pour les dialogues
@@ -21,8 +18,8 @@ public class DialogUtils {
     /**
      * Ouverture d'un dialogue de confirmation
      *
-     * @param title Le titre du dialogue
-     * @param header Header du dialogue
+     * @param title   Le titre du dialogue
+     * @param header  Header du dialogue
      * @param content Contenu du dialogue
      * @return Le bouton pressé
      */
@@ -43,7 +40,7 @@ public class DialogUtils {
     /**
      * Ouverture d'un dialogue d'informations
      *
-     * @param title Le titre de la fenetre de dialogue
+     * @param title   Le titre de la fenetre de dialogue
      * @param content Le contenu de la fenetre
      */
     public static void infosDialog(String title, Node content) {
@@ -59,11 +56,11 @@ public class DialogUtils {
     /**
      * Ouverture d'un dialogue d'input
      *
-     * @param title Le titre du dialogue
-     * @param header Header du dialogue
-     * @param content Contenu du dialogue
+     * @param title       Le titre du dialogue
+     * @param header      Header du dialogue
+     * @param content     Contenu du dialogue
      * @param textChecker Fonction de vérification du texte (active le bouton
-     * 'ok')
+     *                    'ok')
      * @return La chaine de caractère de l'input (null si 'annuler')
      */
     public static String inputDialog(String title, String header, String content, Function<String, Boolean> textChecker) {
@@ -77,6 +74,7 @@ public class DialogUtils {
             {
                 super.bind(resultProperty);
             }
+
             @Override
             protected boolean computeValue() {
                 return textChecker.apply(resultProperty.get());

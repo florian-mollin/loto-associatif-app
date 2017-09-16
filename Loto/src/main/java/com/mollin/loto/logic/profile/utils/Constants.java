@@ -3,7 +3,6 @@ package com.mollin.loto.logic.profile.utils;
 import org.controlsfx.glyphfont.FontAwesome.Glyph;
 
 /**
- *
  * @author MOLLIN Florian
  */
 public interface Constants {

@@ -1,10 +1,11 @@
 package com.mollin.loto.logic.storage;
 
-import com.mollin.loto.logic.main.utils.Constants;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.mollin.loto.logic.main.grid.LotoGrid;
+import com.mollin.loto.logic.main.utils.Constants;
 import com.mollin.loto.logic.utils.FileUtils;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -20,7 +21,7 @@ public class GridStorage {
     /**
      * Sauvegarde de la grille
      *
-     * @param grid La grille
+     * @param grid        La grille
      * @param profileName Le nom du profil
      */
     public static void saveGrid(LotoGrid grid, String profileName) {

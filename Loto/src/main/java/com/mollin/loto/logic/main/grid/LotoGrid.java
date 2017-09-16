@@ -3,10 +3,11 @@ package com.mollin.loto.logic.main.grid;
 import com.mollin.loto.gui.main.grid.LotoGridGUIListener;
 import com.mollin.loto.logic.main.utils.SizedStack;
 import com.mollin.loto.logic.storage.GridStorage;
+import org.javatuples.Pair;
+
 import java.util.HashSet;
 import java.util.Set;
 import java.util.Stack;
-import org.javatuples.Pair;
 
 /**
  * Cette grille représente la "vraie" grille de loto.<br>
@@ -36,8 +37,8 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
      * Constructeur de la grille.
      *
      * @param historyDepth Profondeur de l'historique
-     * @param maxNumber	Nombre maximum autorisé lors d'un tirage
-     * @param filePath Chemin du fichier de sauvegarde/chargement
+     * @param maxNumber    Nombre maximum autorisé lors d'un tirage
+     * @param filePath     Chemin du fichier de sauvegarde/chargement
      */
     public LotoGrid(int historyDepth, int maxNumber, String profileName) {
         this.gridHistory = new SizedStack<>(historyDepth);
@@ -51,7 +52,7 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
      * Constructeur de la grille (sans nom de profil, donc sans sauvegarde)
      *
      * @param historyDepth Profondeur de l'historique
-     * @param maxNumber	Nombre maximum autorisé lors d'un tirage
+     * @param maxNumber    Nombre maximum autorisé lors d'un tirage
      */
     public LotoGrid(int historyDepth, int maxNumber) {
         this(historyDepth, maxNumber, null);
@@ -117,8 +118,8 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     /**
      * Vérifie si la grille de loto contient le nombre donné.
      *
-     * @param number	Le nombre à tester
-     * @return	Vrai si le nombre est présent dans la grille.
+     * @param number Le nombre à tester
+     * @return Vrai si le nombre est présent dans la grille.
      */
     public boolean contains(int number) {
         return this.gridHistory.peek().contains(number);
@@ -136,7 +137,7 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     /**
      * Propagation de l'evenement 'update'.
      *
-     * @param grid	La nouvelle grille.
+     * @param grid       La nouvelle grille.
      * @param lastNumber Le dernier nombre tiré.
      */
     public void fireUpdate() {
@@ -152,7 +153,7 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     /**
      * Renvoit la grille courante.
      *
-     * @return	La grille courante.
+     * @return La grille courante.
      */
     protected Grid getActualGrid() {
         return this.gridHistory.peek().getValue0();

@@ -30,7 +30,7 @@ public class TooltipUtils {
     /**
      * Ajoute un "tooltip" sur le noeud donné
      *
-     * @param node Le noeud affichant le "tooltip"
+     * @param node    Le noeud affichant le "tooltip"
      * @param content Contenu du "tooltip"
      */
     public static void addTooltip(Node node, String content) {

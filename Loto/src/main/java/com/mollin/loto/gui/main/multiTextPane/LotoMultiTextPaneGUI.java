@@ -3,9 +3,6 @@ package com.mollin.loto.gui.main.multiTextPane;
 import com.mollin.loto.gui.main.utils.AdaptativeText;
 import com.mollin.loto.gui.main.utils.FontSizeCalculator;
 import com.mollin.loto.logic.main.utils.Constants;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.stream.Collectors;
 import javafx.beans.binding.IntegerBinding;
 import javafx.event.ActionEvent;
 import javafx.geometry.Bounds;
@@ -18,6 +15,10 @@ import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import org.controlsfx.control.PopOver;
+
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Panneau affichant un texte pouvant être changé par l'utilisateur.
