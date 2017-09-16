@@ -15,7 +15,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
-import org.controlsfx.glyphfont.FontAwesome;
 import org.controlsfx.glyphfont.FontAwesome.Glyph;
 
 /**
@@ -63,29 +62,27 @@ public class ParametersTextPane extends BorderPane {
         // parametrage
         this.buttons.setPadding(new Insets(0, 0, Constants.Size.INNER_MARGIN_SIZE, 0));
         this.setPadding(new Insets(Constants.Size.OUTER_MARGIN_SIZE));
-        this.listView.setCellFactory((list) -> {
-            return new ListCell<String>() {
-                @Override
-                protected void updateItem(String item, boolean empty) {
-                    super.updateItem(item, empty);
-                    if (item == null || empty) {
-                        setText(null);
-                        setGraphic(null);
-                    } else {
-                        // graphic
-                        BorderPane root = new BorderPane();
-                        Label label = new Label(item);
-                        Label deleteLabel = GlyphUtils.createLabel(FontAwesome.Glyph.MINUS_CIRCLE);
-                        root.setCenter(new HBox(label));
-                        root.setRight(deleteLabel);
-                        setGraphic(root);
-                        // events
-                        deleteLabel.setOnMouseEntered(me -> deleteLabel.setTextFill(Color.RED));
-                        deleteLabel.setOnMouseExited(me -> deleteLabel.setTextFill(Color.BLACK));
-                        deleteLabel.setOnMouseClicked(me -> list.getItems().remove(item));
-                    }
+        this.listView.setCellFactory((list) -> new ListCell<String>() {
+            @Override
+            protected void updateItem(String item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null || empty) {
+                    setText(null);
+                    setGraphic(null);
+                } else {
+                    // graphic
+                    BorderPane root = new BorderPane();
+                    Label label = new Label(item);
+                    Label deleteLabel = GlyphUtils.createLabel(Glyph.MINUS_CIRCLE);
+                    root.setCenter(new HBox(label));
+                    root.setRight(deleteLabel);
+                    setGraphic(root);
+                    // events
+                    deleteLabel.setOnMouseEntered(me -> deleteLabel.setTextFill(Color.RED));
+                    deleteLabel.setOnMouseExited(me -> deleteLabel.setTextFill(Color.BLACK));
+                    deleteLabel.setOnMouseClicked(me -> list.getItems().remove(item));
                 }
-            };
+            }
         });
     }
 
@@ -96,10 +93,8 @@ public class ParametersTextPane extends BorderPane {
         this.addButton.setOnAction(ae -> {
             String newText = DialogUtils.inputDialog(Constants.Label.TITLE_ADD_TEXT_DIALOG, Constants.Label.TITLE_ADD_TEXT_DIALOG,
                     Constants.Label.CONTENT_ADD_TEXT_DIALOG,
-                    s -> {
-                        return s != null && !s.isEmpty()
-                                && !listView.getItems().contains(s);
-                    }
+                    s -> s != null && !s.isEmpty()
+                            && !listView.getItems().contains(s)
             );
             if (newText != null) {
                 listView.getItems().add(newText);

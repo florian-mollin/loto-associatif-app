@@ -166,19 +166,13 @@ public class ProfileStageConfigurator {
      * Ajout des evenements
      */
     private static void setEvents() {
-        stage.setOnShowing(ae -> {
-            refreshProfiles();
-        });
-        aboutButton.setOnAction(ae -> {
-            DialogUtils.infosDialog("A propos", new AboutPane());
-        });
+        stage.setOnShowing(ae -> refreshProfiles());
+        aboutButton.setOnAction(ae -> DialogUtils.infosDialog("A propos", new AboutPane()));
         createButton.setOnAction(ae -> {
             String profileName = DialogUtils.inputDialog(Constants.Label.TITLE_CREATE_DIALOG, Constants.Label.TITLE_CREATE_DIALOG,
                     Constants.Label.CONTENT_CREATE_DIALOG,
-                    s -> {
-                        return s != null && !s.isEmpty() && !s.trim().isEmpty()
-                                && !profileChoice.getItems().stream().map(p -> p.getValue0()).collect(Collectors.toList()).contains(s);
-                    }
+                    s -> s != null && !s.isEmpty() && !s.trim().isEmpty()
+                            && !profileChoice.getItems().stream().map(Pair::getValue0).collect(Collectors.toList()).contains(s)
             );
             if (profileName != null) {
                 profileName = FileUtils.toValidFileName(profileName);

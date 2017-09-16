@@ -65,12 +65,8 @@ public class LotoButtonPaneGUI extends BorderPane {
      * Définition des evenements
      */
     private void setEvents() {
-        this.clearButton.setOnAction(ae -> {
-            grid.clear();
-        });
-        this.undoButton.setOnAction(ae -> {
-            grid.undo();
-        });
+        this.clearButton.setOnAction(ae -> grid.clear());
+        this.undoButton.setOnAction(ae -> grid.undo());
         this.editButton.setOnAction(ae -> {
             if (!this.editButton.isSelected()) {
                 editProcedure.call();

@@ -91,15 +91,9 @@ public class ParametersColorPane extends GridPane {
      * Ajout des evenements
      */
     private void setEvents() {
-        this.primaryColorPicker.setOnAction(ae -> {
-            this.glimpseCell.setBackground(Utils.createBackground(this.primaryColorPicker.getValue()));
-        });
-        this.secondaryColorPicker.setOnAction(ae -> {
-            this.glimpseCell.getNumber().setFill(this.secondaryColorPicker.getValue());
-        });
-        this.lineColorPicker.setOnAction(ae -> {
-            this.glimpseCell.setBorder(Utils.createBorder(this.lineColorPicker.getValue(), param.getLotoGridGUIParameters().lineSize));
-        });
+        this.primaryColorPicker.setOnAction(ae -> this.glimpseCell.setBackground(Utils.createBackground(this.primaryColorPicker.getValue())));
+        this.secondaryColorPicker.setOnAction(ae -> this.glimpseCell.getNumber().setFill(this.secondaryColorPicker.getValue()));
+        this.lineColorPicker.setOnAction(ae -> this.glimpseCell.setBorder(Utils.createBorder(this.lineColorPicker.getValue(), param.getLotoGridGUIParameters().lineSize)));
     }
 
     /**

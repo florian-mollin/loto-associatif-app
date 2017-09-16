@@ -12,5 +12,5 @@ public interface LotoGridGUIListener {
      *
      * @param number Le nombre cliqué par l'utilisateur
      */
-    public void onClic(int number);
+    void onClic(int number);
 }

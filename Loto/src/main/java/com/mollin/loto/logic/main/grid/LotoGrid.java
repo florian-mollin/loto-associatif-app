@@ -31,14 +31,14 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     /**
      * Nom du profil
      */
-    private String profileName;
+    private final String profileName;
 
     /**
      * Constructeur de la grille.
      *
-     * @param historyDepth Profondeur de l'historique
-     * @param maxNumber    Nombre maximum autorisé lors d'un tirage
-     * @param filePath     Chemin du fichier de sauvegarde/chargement
+     * @param historyDepth  Profondeur de l'historique
+     * @param maxNumber     Nombre maximum autorisé lors d'un tirage
+     * @param profileName   Chemin du fichier de sauvegarde/chargement
      */
     public LotoGrid(int historyDepth, int maxNumber, String profileName) {
         this.gridHistory = new SizedStack<>(historyDepth);
@@ -84,7 +84,6 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     public void clic(int number) {
         if (1 <= number && number <= this.maxNumber) {
             Grid oldGrid = this.gridHistory.peek().getValue0();
-            Integer oldLastNumber = this.gridHistory.peek().getValue1();
             Grid newGrid = oldGrid.derive(number);
             Integer newLastNumber = getNewLastNumber(number);
             this.gridHistory.push(Pair.with(newGrid, newLastNumber));
@@ -97,8 +96,7 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     public void clear() {
         if (!this.gridHistory.peek().getValue0().isEmpty()) {
             Grid newGrid = new Grid();
-            Integer newLastNumber = null;
-            this.gridHistory.push(Pair.with(newGrid, newLastNumber));
+            this.gridHistory.push(Pair.with(newGrid, null));
             save();
             fireUpdate();
         }
@@ -108,21 +106,9 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
     public void undo() {
         if (this.gridHistory.size() > 1) {
             this.gridHistory.pop();
-            Grid newGrid = this.gridHistory.peek().getValue0();
-            Integer newLastNumber = this.gridHistory.peek().getValue1();
             save();
             fireUpdate();
         }
-    }
-
-    /**
-     * Vérifie si la grille de loto contient le nombre donné.
-     *
-     * @param number Le nombre à tester
-     * @return Vrai si le nombre est présent dans la grille.
-     */
-    public boolean contains(int number) {
-        return this.gridHistory.peek().contains(number);
     }
 
     /**
@@ -136,13 +122,10 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
 
     /**
      * Propagation de l'evenement 'update'.
-     *
-     * @param grid       La nouvelle grille.
-     * @param lastNumber Le dernier nombre tiré.
      */
     public void fireUpdate() {
         if (this.listeners != null) {
-            this.listeners.stream().forEach((listener) -> {
+            this.listeners.forEach((listener) -> {
                 Grid grid = gridHistory.peek().getValue0();
                 Integer lastNumber = gridHistory.peek().getValue1();
                 listener.onUpdate(grid, lastNumber);

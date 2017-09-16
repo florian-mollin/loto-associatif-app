@@ -19,7 +19,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import org.controlsfx.control.Notifications;
-import org.controlsfx.glyphfont.FontAwesome;
 import org.controlsfx.glyphfont.FontAwesome.Glyph;
 import org.javatuples.Pair;
 
@@ -75,59 +74,57 @@ public class ParametersImagePane extends BorderPane {
         // parametrage
         this.buttons.setPadding(new Insets(0, 0, Constants.Size.INNER_MARGIN_SIZE, 0));
         this.setPadding(new Insets(Constants.Size.OUTER_MARGIN_SIZE));
-        this.listView.setCellFactory((list) -> {
-            return new ListCell<Pair<String, Long>>() {
-                @Override
-                protected void updateItem(Pair<String, Long> item, boolean empty) {
-                    super.updateItem(item, empty);
-                    if (item == null || empty) {
-                        setText(null);
-                        setGraphic(null);
-                    } else {
-                        // graphic
-                        BorderPane root = new BorderPane();
-                        String imageName = item.getValue0();
-                        Long imageTime = item.getValue1();
-                        Image image = ParametersProfileStorage.getImage(imageName, profileName);
-                        ImageView imageView = new ImageView(image);
-                        imageView.setFitHeight(Constants.Size.IMAGE_SIZE_IN_LIST);
-                        imageView.setFitWidth(Constants.Size.IMAGE_SIZE_IN_LIST);
-                        imageView.setPreserveRatio(true);
-                        Label timeLabel = new Label(imageTime + "s");
-                        Label upLabel = GlyphUtils.createLabel(FontAwesome.Glyph.CARET_UP);
-                        Label downLabel = GlyphUtils.createLabel(FontAwesome.Glyph.CARET_DOWN);
-                        Label deleteLabel = GlyphUtils.createLabel(FontAwesome.Glyph.MINUS_CIRCLE);
-                        HBox center = new HBox(imageView, timeLabel);
-                        center.setSpacing(Constants.Size.INNER_MARGIN_SIZE);
-                        center.setAlignment(Pos.CENTER_LEFT);
-                        HBox right = new HBox(upLabel, downLabel, deleteLabel);
-                        right.setSpacing(Constants.Size.INNER_MARGIN_SIZE);
-                        root.setCenter(center);
-                        root.setRight(right);
-                        setGraphic(root);
-                        // events
-                        upLabel.setOnMouseEntered(me -> upLabel.setTextFill(Color.BLUE));
-                        upLabel.setOnMouseExited(me -> upLabel.setTextFill(Color.BLACK));
-                        upLabel.setOnMouseClicked(me -> {
-                            int index = list.getItems().indexOf(item);
-                            if (index >= 1) {
-                                Collections.swap(list.getItems(), index, index - 1);
-                            }
-                        });
-                        downLabel.setOnMouseEntered(me -> downLabel.setTextFill(Color.BLUE));
-                        downLabel.setOnMouseExited(me -> downLabel.setTextFill(Color.BLACK));
-                        downLabel.setOnMouseClicked(me -> {
-                            int index = list.getItems().indexOf(item);
-                            if (index < list.getItems().size() - 1) {
-                                Collections.swap(list.getItems(), index, index + 1);
-                            }
-                        });
-                        deleteLabel.setOnMouseEntered(me -> deleteLabel.setTextFill(Color.RED));
-                        deleteLabel.setOnMouseExited(me -> deleteLabel.setTextFill(Color.BLACK));
-                        deleteLabel.setOnMouseClicked(me -> list.getItems().remove(item));
-                    }
+        this.listView.setCellFactory((list) -> new ListCell<Pair<String, Long>>() {
+            @Override
+            protected void updateItem(Pair<String, Long> item, boolean empty) {
+                super.updateItem(item, empty);
+                if (item == null || empty) {
+                    setText(null);
+                    setGraphic(null);
+                } else {
+                    // graphic
+                    BorderPane root = new BorderPane();
+                    String imageName = item.getValue0();
+                    Long imageTime = item.getValue1();
+                    Image image = ParametersProfileStorage.getImage(imageName, profileName);
+                    ImageView imageView = new ImageView(image);
+                    imageView.setFitHeight(Constants.Size.IMAGE_SIZE_IN_LIST);
+                    imageView.setFitWidth(Constants.Size.IMAGE_SIZE_IN_LIST);
+                    imageView.setPreserveRatio(true);
+                    Label timeLabel = new Label(imageTime + "s");
+                    Label upLabel = GlyphUtils.createLabel(Glyph.CARET_UP);
+                    Label downLabel = GlyphUtils.createLabel(Glyph.CARET_DOWN);
+                    Label deleteLabel = GlyphUtils.createLabel(Glyph.MINUS_CIRCLE);
+                    HBox center = new HBox(imageView, timeLabel);
+                    center.setSpacing(Constants.Size.INNER_MARGIN_SIZE);
+                    center.setAlignment(Pos.CENTER_LEFT);
+                    HBox right = new HBox(upLabel, downLabel, deleteLabel);
+                    right.setSpacing(Constants.Size.INNER_MARGIN_SIZE);
+                    root.setCenter(center);
+                    root.setRight(right);
+                    setGraphic(root);
+                    // events
+                    upLabel.setOnMouseEntered(me -> upLabel.setTextFill(Color.BLUE));
+                    upLabel.setOnMouseExited(me -> upLabel.setTextFill(Color.BLACK));
+                    upLabel.setOnMouseClicked(me -> {
+                        int index = list.getItems().indexOf(item);
+                        if (index >= 1) {
+                            Collections.swap(list.getItems(), index, index - 1);
+                        }
+                    });
+                    downLabel.setOnMouseEntered(me -> downLabel.setTextFill(Color.BLUE));
+                    downLabel.setOnMouseExited(me -> downLabel.setTextFill(Color.BLACK));
+                    downLabel.setOnMouseClicked(me -> {
+                        int index = list.getItems().indexOf(item);
+                        if (index < list.getItems().size() - 1) {
+                            Collections.swap(list.getItems(), index, index + 1);
+                        }
+                    });
+                    deleteLabel.setOnMouseEntered(me -> deleteLabel.setTextFill(Color.RED));
+                    deleteLabel.setOnMouseExited(me -> deleteLabel.setTextFill(Color.BLACK));
+                    deleteLabel.setOnMouseClicked(me -> list.getItems().remove(item));
                 }
-            };
+            }
         });
     }
 

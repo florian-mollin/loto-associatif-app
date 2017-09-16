@@ -10,5 +10,5 @@ public interface Procedure {
     /**
      * Appel de la procédure
      */
-    public void call();
+    void call();
 }

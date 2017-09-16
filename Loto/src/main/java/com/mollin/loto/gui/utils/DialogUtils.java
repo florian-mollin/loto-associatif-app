@@ -30,11 +30,7 @@ public class DialogUtils {
         alert.setContentText(content);
         alert.setHeaderText(header);
         Optional<ButtonType> result = alert.showAndWait();
-        if (result.isPresent()) {
-            return result.get();
-        } else {
-            return null;
-        }
+        return result.orElse(null);
     }
 
     /**
@@ -83,10 +79,6 @@ public class DialogUtils {
         Node okButton = dialog.getDialogPane().lookupButton(ButtonType.OK);
         okButton.disableProperty().bind(isValid.not());
         Optional<String> result = dialog.showAndWait();
-        if (result.isPresent()) {
-            return result.get();
-        } else {
-            return null;
-        }
+        return result.orElse(null);
     }
 }

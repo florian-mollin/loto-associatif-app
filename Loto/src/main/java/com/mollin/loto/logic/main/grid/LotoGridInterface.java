@@ -11,15 +11,15 @@ public interface LotoGridInterface {
      *
      * @param number Le nombre sur lequel cliquer
      */
-    public void clic(int number);
+    void clic(int number);
 
     /**
      * Demarque la grille (la vide).
      */
-    public void clear();
+    void clear();
 
     /**
      * Effectue un retour arriere dans l'historique.
      */
-    public void undo();
+    void undo();
 }

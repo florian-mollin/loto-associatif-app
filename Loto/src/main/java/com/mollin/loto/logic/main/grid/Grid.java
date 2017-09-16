@@ -13,7 +13,7 @@ public class Grid {
     /**
      * Représente les nombres tirés de la grille.
      */
-    private Set<Integer> numbers;
+    private final Set<Integer> numbers;
 
     /**
      * Constructeur d'une grille vide.
@@ -43,7 +43,7 @@ public class Grid {
     /**
      * Test si une grille est vide.
      *
-     * @return
+     * @return vrai si la grill est vide
      */
     public boolean isEmpty() {
         return this.numbers.isEmpty();

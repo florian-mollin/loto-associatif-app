@@ -79,9 +79,7 @@ public class LotoMultiLogoPaneGUI extends StackPane {
                 Timeline timeline = new Timeline();
                 Image image = this.param.logosTimes.get(i % logosTimesSize).getValue0();
                 Long time = this.param.logosTimes.get((i - 1) % logosTimesSize).getValue1();
-                KeyFrame keyFrame = new KeyFrame(Duration.seconds(time), ae -> {
-                    imageView.setImage(image);
-                });
+                KeyFrame keyFrame = new KeyFrame(Duration.seconds(time), ae -> imageView.setImage(image));
                 timeline.getKeyFrames().add(keyFrame);
                 transition.getChildren().add(timeline);
             }

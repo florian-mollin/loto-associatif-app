@@ -5,6 +5,7 @@ import javafx.beans.binding.NumberExpression;
 import javafx.geometry.BoundingBox;
 import javafx.geometry.Bounds;
 import javafx.scene.Group;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.layout.Region;
 import javafx.scene.text.Text;
@@ -49,7 +50,7 @@ public class FontSizeCalculator {
                 t.setStyle(fontSizeExpression);
                 t.applyCss();
             });
-            Bounds maxBounds = texts.stream().map(t -> t.getLayoutBounds()).reduce((b1, b2) -> {
+            Bounds maxBounds = texts.stream().map(Node::getLayoutBounds).reduce((b1, b2) -> {
                 double maxWidth = Math.max(b1.getWidth(), b2.getWidth());
                 double maxHeight = Math.max(b1.getHeight(), b2.getHeight());
                 return new BoundingBox(0, 0, maxWidth, maxHeight);
@@ -83,7 +84,7 @@ public class FontSizeCalculator {
      * @return Un binding sur la police de caractere
      */
     public static IntegerBinding createBinding(NumberExpression widthProperty, NumberExpression heightProperty, LinkedHashMap<Integer, Bounds> fontSize2Bounds) {
-        IntegerBinding ib = new IntegerBinding() {
+        return new IntegerBinding() {
             {
                 super.bind(widthProperty, heightProperty);
             }
@@ -95,7 +96,6 @@ public class FontSizeCalculator {
                 return computeBestFontSize(width, height, fontSize2Bounds);
             }
         };
-        return ib;
     }
 
     /**

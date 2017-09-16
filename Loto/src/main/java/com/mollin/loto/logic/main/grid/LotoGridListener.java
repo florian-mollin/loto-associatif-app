@@ -15,5 +15,5 @@ public interface LotoGridListener {
      * @param grid       Le contenu de la nouvelle grille.
      * @param lastNumber Le dernier nombre tiré
      */
-    public void onUpdate(Grid grid, Integer lastNumber);
+    void onUpdate(Grid grid, Integer lastNumber);
 }

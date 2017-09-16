@@ -13,5 +13,5 @@ public enum ScreenFormat {
     /**
      * Ecran au format 16:9
      */
-    _16_9;
+    _16_9
 }

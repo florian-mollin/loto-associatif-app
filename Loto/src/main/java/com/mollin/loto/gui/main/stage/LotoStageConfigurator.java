@@ -137,9 +137,7 @@ public class LotoStageConfigurator {
         multiTextGUI = new LotoMultiTextPaneGUI(multiTextParam);
         lastNumberGUI = new LotoNumberPaneGUI(lastNumberParam);
         logoGUI = new LotoMultiLogoPaneGUI(logoParam);
-        buttonsGUI = new LotoButtonPaneGUI(buttonsParam, lotoGrid, scene, () -> {
-            SeparatorsStorage.saveSeparatorsParameters(getSeparatorParam(), profName);
-        });
+        buttonsGUI = new LotoButtonPaneGUI(buttonsParam, lotoGrid, scene, () -> SeparatorsStorage.saveSeparatorsParameters(getSeparatorParam(), profName));
         // bouton quitter
         exitLabelButton = GlyphUtils.createLabel(Constants.Other.EXIT_BUTTON_GLYPH, lotoParam.fontSizeExitButton);
     }
@@ -201,13 +199,9 @@ public class LotoStageConfigurator {
         exitLabelButton.setOnMouseEntered(ae -> exitLabelButton.setTextFill(Color.RED));
         exitLabelButton.setOnMouseExited(ae -> exitLabelButton.setTextFill(Color.BLACK));
         // place des separateurs
-        lotoStage.setOnShowing(ae -> {
-            setSeparators();
-        });
+        lotoStage.setOnShowing(ae -> setSeparators());
         if (Constants.Other.FULL_SCREEN_APP) {
-            scene.widthProperty().addListener((ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> {
-                setSeparators();
-            });
+            scene.widthProperty().addListener((ObservableValue<? extends Number> observable, Number oldValue, Number newValue) -> setSeparators());
         }
     }
 

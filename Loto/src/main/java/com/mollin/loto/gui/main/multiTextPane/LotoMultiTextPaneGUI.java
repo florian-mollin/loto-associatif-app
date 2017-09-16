@@ -114,9 +114,7 @@ public class LotoMultiTextPaneGUI extends StackPane {
             popover.setContentNode(buttonsBox);
             popover.setStyle("-fx-font-size: " + POPOVER_FONT_SIZE + "px");
 
-            this.text.setOnMouseClicked((MouseEvent event) -> {
-                popover.show(this.text);
-            });
+            this.text.setOnMouseClicked((MouseEvent event) -> popover.show(this.text));
         }
     }
 
