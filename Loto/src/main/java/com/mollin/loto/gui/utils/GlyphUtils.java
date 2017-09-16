@@ -16,6 +16,12 @@ public class GlyphUtils {
     private static final GlyphFont GLYPH_FONT_AWESOME = GlyphFontRegistry.font("FontAwesome");
 
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private GlyphUtils() {
+    }
+
+    /**
      * Configure un bouton pour lui ajouter un texte et un icon
      *
      * @param <T>            Le type de bouton

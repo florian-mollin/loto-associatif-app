@@ -24,6 +24,12 @@ import java.util.stream.Collectors;
  */
 public class FontSizeCalculator {
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private FontSizeCalculator() {
+    }
+
+    /**
      * Construit la map associant une taille de police à une surface.
      *
      * @param lStr        La liste des possibles chaines de caractères

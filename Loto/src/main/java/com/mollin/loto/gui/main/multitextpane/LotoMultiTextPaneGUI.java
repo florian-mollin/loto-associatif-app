@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.main.multiTextPane;
+package com.mollin.loto.gui.main.multitextpane;
 
 import com.mollin.loto.gui.main.utils.AdaptativeText;
 import com.mollin.loto.gui.main.utils.FontSizeCalculator;

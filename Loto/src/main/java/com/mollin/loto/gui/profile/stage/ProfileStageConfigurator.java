@@ -2,7 +2,7 @@ package com.mollin.loto.gui.profile.stage;
 
 import com.mollin.loto.gui.main.stage.LotoStageConfigurator;
 import com.mollin.loto.gui.parameters.stage.ParametersStageConfigurator;
-import com.mollin.loto.gui.profile.aboutPane.AboutPane;
+import com.mollin.loto.gui.profile.aboutpane.AboutPane;
 import com.mollin.loto.gui.utils.DialogUtils;
 import com.mollin.loto.gui.utils.GlyphUtils;
 import com.mollin.loto.gui.utils.Utils;

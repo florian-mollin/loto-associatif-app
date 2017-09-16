@@ -27,6 +27,12 @@ public class ParametersProfileStorage {
     private static final Gson GSON = new GsonBuilder().create();
 
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private ParametersProfileStorage() {
+    }
+
+    /**
      * Chargement des parametres du profil donné
      *
      * @param profileName Le nom du profil

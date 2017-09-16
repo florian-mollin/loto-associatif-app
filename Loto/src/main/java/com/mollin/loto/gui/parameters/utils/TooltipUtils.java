@@ -14,6 +14,11 @@ import org.controlsfx.glyphfont.FontAwesome;
  * @author MOLLIN Florian
  */
 public class TooltipUtils {
+    /**
+     * Constructeur privé car classe utilitaire
+     */
+    private TooltipUtils() {
+    }
 
     /**
      * Création d'un icone pour l'affichage de "tooltip"

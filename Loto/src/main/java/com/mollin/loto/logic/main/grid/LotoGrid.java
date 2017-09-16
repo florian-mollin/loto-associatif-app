@@ -125,7 +125,7 @@ public class LotoGrid implements LotoGridInterface, LotoGridGUIListener {
      */
     public void fireUpdate() {
         if (this.listeners != null) {
-            this.listeners.forEach((listener) -> {
+            this.listeners.forEach(listener -> {
                 Grid grid = gridHistory.peek().getValue0();
                 Integer lastNumber = gridHistory.peek().getValue1();
                 listener.onUpdate(grid, lastNumber);

@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.main.numberPane;
+package com.mollin.loto.gui.main.numberpane;
 
 import com.mollin.loto.gui.main.utils.AdaptativeText;
 import com.mollin.loto.gui.main.utils.FontSizeCalculator;

@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.parameters.imagePane;
+package com.mollin.loto.gui.parameters.imagepane;
 
 import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.parameters.utils.Constants;

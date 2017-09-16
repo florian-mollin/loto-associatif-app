@@ -19,6 +19,12 @@ public class SeparatorsStorage {
     private static final Gson GSON = new GsonBuilder().create();
 
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private SeparatorsStorage() {
+    }
+
+    /**
      * Chargement des séparateurs
      *
      * @param profileName le nom du profil

@@ -23,6 +23,12 @@ import java.util.function.UnaryOperator;
  */
 public class Utils {
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private Utils() {
+    }
+
+    /**
      * Css permettant de masquer les séparateurs (des splitPanes)
      */
     private static final String DISABLE_SPLIT_PANE_SEPARATOR_CSS = "DisableSplitPaneSeparator.css";

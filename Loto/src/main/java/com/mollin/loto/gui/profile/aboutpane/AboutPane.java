@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.profile.aboutPane;
+package com.mollin.loto.gui.profile.aboutpane;
 
 import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.main.utils.Constants;

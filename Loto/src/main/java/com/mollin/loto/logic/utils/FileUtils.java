@@ -12,6 +12,11 @@ import java.util.List;
  * @author MOLLIN Florian
  */
 public class FileUtils {
+    /**
+     * Constructeur privé car classe utilitaire
+     */
+    private FileUtils() {
+    }
 
     /**
      * Test si le path est un repertoire.

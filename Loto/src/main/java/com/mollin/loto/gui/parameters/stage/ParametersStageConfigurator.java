@@ -1,8 +1,8 @@
 package com.mollin.loto.gui.parameters.stage;
 
-import com.mollin.loto.gui.parameters.colorPane.ParametersColorPane;
-import com.mollin.loto.gui.parameters.imagePane.ParametersImagePane;
-import com.mollin.loto.gui.parameters.textPane.ParametersTextPane;
+import com.mollin.loto.gui.parameters.colorpane.ParametersColorPane;
+import com.mollin.loto.gui.parameters.imagepane.ParametersImagePane;
+import com.mollin.loto.gui.parameters.textpane.ParametersTextPane;
 import com.mollin.loto.gui.utils.Utils;
 import com.mollin.loto.logic.parameters.model.ParametersModel;
 import com.mollin.loto.logic.parameters.utils.Constants;

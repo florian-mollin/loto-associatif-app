@@ -19,6 +19,12 @@ public class GridStorage {
     private static final Gson GSON = new GsonBuilder().create();
 
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private GridStorage() {
+    }
+
+    /**
      * Sauvegarde de la grille
      *
      * @param grid        La grille

@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.parameters.colorPane;
+package com.mollin.loto.gui.parameters.colorpane;
 
 import com.mollin.loto.gui.main.cell.LotoCellGUI;
 import com.mollin.loto.gui.parameters.utils.TooltipUtils;

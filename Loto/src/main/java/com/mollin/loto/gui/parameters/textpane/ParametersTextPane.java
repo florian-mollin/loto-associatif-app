@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.parameters.textPane;
+package com.mollin.loto.gui.parameters.textpane;
 
 import com.mollin.loto.gui.parameters.utils.TooltipUtils;
 import com.mollin.loto.gui.utils.DialogUtils;
@@ -62,7 +62,7 @@ public class ParametersTextPane extends BorderPane {
         // parametrage
         this.buttons.setPadding(new Insets(0, 0, Constants.Size.INNER_MARGIN_SIZE, 0));
         this.setPadding(new Insets(Constants.Size.OUTER_MARGIN_SIZE));
-        this.listView.setCellFactory((list) -> new ListCell<String>() {
+        this.listView.setCellFactory(list -> new ListCell<String>() {
             @Override
             protected void updateItem(String item, boolean empty) {
                 super.updateItem(item, empty);

@@ -1,4 +1,4 @@
-package com.mollin.loto.gui.parameters.imagePane;
+package com.mollin.loto.gui.parameters.imagepane;
 
 import com.mollin.loto.gui.parameters.utils.TooltipUtils;
 import com.mollin.loto.gui.utils.GlyphUtils;
@@ -74,7 +74,7 @@ public class ParametersImagePane extends BorderPane {
         // parametrage
         this.buttons.setPadding(new Insets(0, 0, Constants.Size.INNER_MARGIN_SIZE, 0));
         this.setPadding(new Insets(Constants.Size.OUTER_MARGIN_SIZE));
-        this.listView.setCellFactory((list) -> new ListCell<Pair<String, Long>>() {
+        this.listView.setCellFactory(list -> new ListCell<Pair<String, Long>>() {
             @Override
             protected void updateItem(Pair<String, Long> item, boolean empty) {
                 super.updateItem(item, empty);

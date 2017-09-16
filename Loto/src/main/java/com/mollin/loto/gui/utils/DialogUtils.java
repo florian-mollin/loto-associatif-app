@@ -16,6 +16,12 @@ import java.util.function.Function;
  */
 public class DialogUtils {
     /**
+     * Constructeur privé car classe utilitaire
+     */
+    private DialogUtils() {
+    }
+
+    /**
      * Ouverture d'un dialogue de confirmation
      *
      * @param title   Le titre du dialogue

@@ -10,6 +10,11 @@ import javafx.beans.value.ObservableNumberValue;
  * @author MOLLIN Florian
  */
 public class BindingUtils {
+    /**
+     * Constructeur privé car classe utilitaire
+     */
+    private BindingUtils(){
+    }
 
     /**
      * Fonction 'floor'
