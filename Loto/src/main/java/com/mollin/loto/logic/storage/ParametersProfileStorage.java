@@ -33,7 +33,7 @@ public class ParametersProfileStorage {
     }
 
     /**
-     * Chargement des parametres du profil donné
+     * Chargement des paramètres du profil donné
      *
      * @param profileName Le nom du profil
      * @return Les paramètres associés au profil
